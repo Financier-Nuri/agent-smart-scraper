@@ -1,0 +1,70 @@
+{
+  "name": "smart-scraper",
+  "version": "1.0.0",
+  "description": "AI-powered web scraping with intelligent data extraction",
+  "author": "OpenSource Team",
+  "triggers": [
+    "scrape",
+    "extract",
+    "crawl",
+    "web extraction",
+    "page data"
+  ],
+  "capabilities": {
+    "tools": [
+      {
+        "name": "smart_scrape",
+        "description": "AI-powered web scraping with intelligent data extraction. Use this to extract structured data from any webpage using LLM.",
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string",
+              "description": "The URL to scrape"
+            },
+            "prompt": {
+              "type": "string",
+              "description": "Natural language instructions for what data to extract"
+            },
+            "schema": {
+              "type": "object",
+              "description": "JSON schema defining the expected output structure"
+            },
+            "format": {
+              "type": "string",
+              "enum": ["json", "markdown", "csv"],
+              "description": "Output format"
+            }
+          },
+          "required": ["url"]
+        }
+      }
+    ],
+    "skills": []
+  },
+  "configuration": {
+    "llm": {
+      "provider": {
+        "type": "string",
+        "enum": ["openai", "anthropic", "openclaw", "ollama"],
+        "default": "openai"
+      },
+      "model": {
+        "type": "string",
+        "description": "LLM model to use for extraction"
+      }
+    },
+    "scraper": {
+      "timeout": {
+        "type": "number",
+        "default": 30000
+      },
+      "headless": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  },
+  "tags": ["scraper", "ai", "llm", "browser", "extraction"],
+  "license": "MIT"
+}

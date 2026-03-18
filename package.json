@@ -1,0 +1,38 @@
+{
+  "name": "agent-smart-scraper",
+  "version": "1.0.0",
+  "description": "AI-powered web scraper with intelligent data extraction for OpenClaw agents",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "smart-scraper": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "dev": "tsc --watch",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "scraper",
+    "web-scraping",
+    "ai",
+    "llm",
+    "openclaw",
+    "browser-automation",
+    "playwright"
+  ],
+  "author": "OpenSource Team",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
